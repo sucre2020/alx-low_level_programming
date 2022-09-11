@@ -3,17 +3,19 @@
 #include <time.h>
 
 #include <stdio.h>
-
 /**
  *
- *main - print if the number is postive, zero, or negative
+ ** main - print if the number is postive, zero, or negative
  *
- *Description: using the main function
+ **
  *
- *this program prints if Program is positive, zero, or negative
+ ** Description: using the main function
  *
- * 
- */
+ ** this program prints Programming is positive, zero, or negative
+ *
+ **
+ *
+ **/
 
 int main(void)
 
@@ -25,7 +27,7 @@ int main(void)
 
 	n = rand() - RAND_MAX / 2;
 
-	/* your code goes there */
+	/* code goes there */
 
 	if (n > 0)
 
@@ -54,4 +56,3 @@ int main(void)
 	return (0);
 
 }
-
