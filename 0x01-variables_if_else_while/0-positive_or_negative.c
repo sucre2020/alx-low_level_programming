@@ -9,7 +9,7 @@
  *
  **
  *
- ** Description: using the main function
+ ** Description - using the main function
  *
  ** this program prints Programming is positive, zero, or negative
  *
@@ -28,8 +28,6 @@ int main(void)
 	srand(time(0));
 
 	n = rand() - RAND_MAX / 2;
-
-	/* code goes there */
 
 	if (n > 0)
 
