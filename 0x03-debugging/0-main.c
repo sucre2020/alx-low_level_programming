@@ -3,7 +3,6 @@
 * main - tests the function that prints in integer is positive or negative
 * Return: 0
 */
-
 int main(void)
 {
 int i;
