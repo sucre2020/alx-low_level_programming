@@ -2,9 +2,10 @@
 #include "main.h"
 
 /**
-*@size: parameter
-*Return: returns nothing
-*/
+ * print_square - function that draws a square on the terminal
+ * @size: parameter
+ * Return: returns nothing
+ */
 
 void print_square(int size)
 {
