@@ -1,7 +1,6 @@
 #include "main.h"
 
 /**
- *
  *print_diagonal - function that draws a diagonal line on the terminal
  *
  *@n: number of times \ should be printed
@@ -31,4 +30,3 @@ void print_diagonal(int n)
 		_putchar('\n');
 	}
 }
-
