@@ -1,6 +1,6 @@
 
 /**
-*_strlen - returns the length of a string
+* _strlen - returns the length of a string
 *@s: string
 *Returns length as integer;
 */
