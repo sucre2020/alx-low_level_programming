@@ -1,25 +1,15 @@
-Why C programming is awesome
+Tasks:
 
-Who invented C
+Write a function that prints a string, followed by a new line.
 
-Who are Dennis Ritchie, Brian Kernighan and Linus Torvalds
+Write a function that prints a string in reverse.
 
-What happens when you type gcc main.c
+Write a function that returns the length of a string.
 
-What is an entry point
+Write a function that returns the factorial of a given number.
 
-What is main
+Write a function that returns the value of x raised to the power of y.
 
-How to print text using printf, puts and putchar
+Write a function that returns the natural square root of a number.
 
-How to get the size of a specific type using the unary operator sizeof
-
-How to compile using gcc
-
-What is the default program name when compiling with gcc
-
-What is the official C coding style and how to check your code with betty-style
-
-How to find the right header to include in your source code when using a standard library function
-
-How does the main function influence the return value of the program
+Write a function that returns 1 if the input integer is a prime number, otherwise return 0.
