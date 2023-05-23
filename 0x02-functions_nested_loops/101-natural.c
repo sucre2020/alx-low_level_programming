@@ -1,25 +1,25 @@
-#include"main.h"
+#include "holberton.h"
+#include <stdio.h>
 
 /**
- *main - Entry point
+ * main - Entry point
  *
- *Description: computes the sum of all
- *the multiples of 3 or 5
- *below 1024 (excluded)
- *
- *Return: Always 0 (Success)
+ * Return: Always 0 (Success)
  */
-
 int main(void)
 {
-		int sum, num;
+	int i, n, m, c;
 
-		for (num = 0; num < 1024; ++num)
+	c = 0;
+	for (i = 0; i < 1024; i++)
+	{
+		n = i % 5;
+		m = i % 3;
+		if ((n == 0) || (m == 0))
 		{
-			if ((num % 3 == 0) || (num % 5 == 0))
-				sum += num;
-			}
-				printf("%d\n", sum);
-
-					return (0);
+			c = c + i;
+		}
+	}
+	printf("%i\n", c);
+	return (0);
 }

@@ -1,32 +1,33 @@
-#include"main.h"
+#include "holberton.h"
+#include <stdio.h>
 
 /**
- *main - Entry point
+ * main - Entry point
  *
- *Description: prints the first 50 Fibonacci numbers
- *starting with 1 and 2 folled by a new line
- *
- *Return: Always 0 (Success)
+ * Return: Always 0 (Success)
  */
-
 int main(void)
 {
-		int count;
-		unsigned long fib1 = 0, fib2 = 1, sum;
+	long int i, n, m, c, u;
 
-		for (count = 0; count < 50; ++count)
+	n = 1;
+	m = 2;
+	u = 48;
+	printf("%li, ", n);
+	printf("%li, ", m);
+	for (i = 1; i <= u; i++)
+	{
+		c = m + n;
+		n = m;
+		m = c;
+		if (i != u)
 		{
-		sum = fib1 + fib2;
-		printf("%lu", sum);
-
-		fib1 = fib2;
-		fib2 = sum;
-
-		if (count == 49)
-		printf("\n");
+			printf("%li, ", c);
+		}
 		else
-		printf(", ");
+		{
+			printf("%li\n", c);
+		}
 	}
-
-		return (0);
+	return (0);
 }

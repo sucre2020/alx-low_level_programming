@@ -1,72 +1,45 @@
-#include"main.h"
+#include "holberton.h"
+#include <stdio.h>
 
 /**
- *numLength - returns the length of string
+ * main - Entry point
  *
- *@num: operand number
- *
- *Return: number of digits
+ * Return: Always 0 (Success)
  */
-
-int numLength(int num)
-{
-		int length = 0;
-
-		if (!num)
-		return (1);
-
-		while (num)
-		{
-		num = num / 10;
-		length += 1;
-	}
-
-	return (length);
-}
-
-/**
- *main - Entry point
- *
- *Description: prints the first 98 Fibonacci numbers
- *starting with 1 and 2 followed by a new line
- *
- *Solution was copied from Nobert Patrick
- *Wise, github handle: Trikcode
- *
- *Return: Always 0 (Success)
- */
-
 int main(void)
 {
-		int count, initial0s;
-	unsigned long f1 = 1, f2 = 2, sum, mx = 100000000, f1o = 0, f2o = 0, sumo = 0;
+	unsigned long int a, b, c, d, m, n, z;
+	unsigned long int split1, split2, digit, thousand, cycl, limit;
 
-		for (count = 1; count <= 98; ++count)
-		{
-		if (f1o > 0)
-		printf("%lu", f1o);
-		initial0s = numLength(mx) - 1 - numLength(f1);
-
-		while (f1o > 0 && initial0s > 0)
-		{
-		printf("%d", 0);
-		--initial0s;
-										}
-
-		printf("%lu", f1);
-
-		sum = (f1 + f2) % mx;
-		sumo = f1o + f2o + (f1 + f2) / mx;
-		f1 = f2;
-		f1o = f2o;
-		f2 = sum;
-		f2o = sumo;
-
-		if (count != 98)
-		printf(", ");
-		else
-		printf("\n");
+	m = 1;
+	n = 2;
+	limit = 96;
+	digit = 1000;
+	printf("%lu, ", m);
+	printf("%lu, ", n);
+	for (cycl = 1; cycl <= 90; cycl++)
+	{
+		z = m + n;
+		m = n;
+		n = z;
+		printf("%lu, ", z);
 	}
-
-		return (0);
+	a = m / digit, b = m % digit;
+	c = n / digit, d = n % digit;
+	for (cycl = 91; cycl <= limit; cycl++)
+	{
+		thousand = (b + d) / digit;
+		split1 = (a + c) + thousand;
+		split2 = (b + d) - thousand * digit;
+		a = c, b = d;
+		c = split1, d = split2;
+		if (split2 >= 100)
+			printf("%lu%lu", split1, split2);
+		else
+			printf("%lu0%lu", split1, split2);
+		if (cycl != limit)
+			printf(", ");
+	}
+	putchar('\n');
+	return (0);
 }
